@@ -2,7 +2,6 @@ package DBIx::Class::InflateColumn::Object::Enum;
 
 use warnings;
 use strict;
-use self;
 use Carp qw/croak confess/;
 use Object::Enum;
 
@@ -16,7 +15,7 @@ Version 0.03
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
@@ -75,9 +74,10 @@ Users do not call this directly!
 =cut
 
 sub register_column {
-    my ($column, $info) = args;
+    my $self = shift;
+    my ($column, $info) = @_;
     
-    self->next::method(args);
+    $self->next::method(@_);
     
     return unless defined $info->{is_enum} and $info->{is_enum};
     
@@ -99,7 +99,7 @@ sub register_column {
         $values->{$info->{default_value}} = 1;
     }
     
-    self->inflate_column(
+    $self->inflate_column(
         $column => {
             inflate => sub {
                 my $val = shift;
