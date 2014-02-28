@@ -1,6 +1,4 @@
-package main;
-
-use Test::More 'no_plan';
+use Test::More tests => 4;
 
 BEGIN {
     use lib 't/lib';
@@ -17,8 +15,4 @@ my $rs = $db->resultset('WithBadDefaultValue')
 
 ok defined($rs) && $rs, 'got a resultset'
     or diag "ResultSet: $rs";
-
-diag $rs->enum;
-
-1; # end of test
 
