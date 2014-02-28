@@ -16,6 +16,7 @@ Version 0.03
 =cut
 
 # Dist::Zill should handle this now
+# ABSTRACT:  Allows a DBIx::Class user to define a Object::Enum column
 #our $VERSION = '0.04';
 
 
