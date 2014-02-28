@@ -2,6 +2,7 @@ Revision history for DBIx-Class-InflateColumn-Object-Enum
 
 0.05 Jan 27th 2014
 	- Updated dist build to distzilla
+	- fixed https://rt.cpan.org/Ticket/Display.html?id=93432
 	TODO: fix issue 74086
 	TODO: fix issue 80705
 0.04    Jan 27th 2009

@@ -95,12 +95,11 @@ sub register_column {
     
     my $values = $info->{extra}->{list};
     my %values = map {$_=>1} @{$values};
-    
-    if ( defined($info->{default_value}) && !exists $values{$info->{default_value}}) {
-        push(@{$values},$info->{default_value});
-        $values->{$info->{default_value}} = 1;
-    }
-    
+
+    push(@{$values},$info->{default_value})
+        if defined($info->{default_value})
+        && !exists $values{$info->{default_value}};
+
     $self->inflate_column(
         $column => {
             inflate => sub {
