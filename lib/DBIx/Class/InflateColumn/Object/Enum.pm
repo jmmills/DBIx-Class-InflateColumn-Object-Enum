@@ -15,7 +15,8 @@ Version 0.03
 
 =cut
 
-our $VERSION = '0.04';
+# Dist::Zill should handle this now
+#our $VERSION = '0.04';
 
 
 =head1 SYNOPSIS
