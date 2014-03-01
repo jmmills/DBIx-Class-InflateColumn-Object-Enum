@@ -100,6 +100,10 @@ sub register_column {
         if defined($info->{default_value})
         && !exists $values{$info->{default_value}};
 
+    push(@{$values}, undef)
+        if defined($info->{is_nullable})
+        && $info->{is_nullable};
+
     $self->inflate_column(
         $column => {
             inflate => sub {
