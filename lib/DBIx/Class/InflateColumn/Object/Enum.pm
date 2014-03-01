@@ -105,7 +105,7 @@ sub register_column {
             inflate => sub {
                 my $val = shift;
                 my $e = Object::Enum->new({values=>$values});
-                $e->value($val) if $val and exists $values{$val};
+                $e->value($val);
                 return $e;
             },
             deflate => sub {
