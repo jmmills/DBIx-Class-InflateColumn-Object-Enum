@@ -24,6 +24,10 @@ __PACKAGE__->add_columns(
         extra => {
             list => [qw/red green blue/]
         },
+    },
+    foo => {
+        data_type => 'varchar',
+        is_nullable => 1
     }
 );
 __PACKAGE__->set_primary_key('id');

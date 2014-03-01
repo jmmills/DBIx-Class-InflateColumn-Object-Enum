@@ -109,6 +109,7 @@ sub register_column {
             inflate => sub {
                 my $val = shift;
                 my $e = Object::Enum->new({values=>$values});
+                $self->make_column_dirty($column);
                 $e->value($val);
                 return $e;
             },
