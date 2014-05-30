@@ -17,4 +17,4 @@ name: DBIx-Class-InflateColumn-Object-Enum
 requires:
   DBIx::Class::Schema: 0
   Object::Enum: 0
-version: 0.05
+version: 0.06

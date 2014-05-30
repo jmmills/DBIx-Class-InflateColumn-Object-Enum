@@ -1,5 +1,5 @@
 package DBIx::Class::InflateColumn::Object::Enum;
-$DBIx::Class::InflateColumn::Object::Enum::VERSION = '0.05';
+$DBIx::Class::InflateColumn::Object::Enum::VERSION = '0.06';
 use warnings;
 use strict;
 use Carp qw/croak confess/;
