@@ -1,5 +1,8 @@
 Revision history for DBIx-Class-InflateColumn-Object-Enum
 
+0.06 May 30th 2014
+	- bind is_nullable to Object::Enum unset and default value behavior
+	- fixes RT 95597
 0.05 Jan 27th 2014
 	- Updated dist build to distzilla
 	- fixed https://rt.cpan.org/Ticket/Display.html?id=93432
