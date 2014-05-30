@@ -51,7 +51,6 @@ Now you may treat the column as an [Object::Enum](https://metacpan.org/pod/Objec
     print $table_rs->color->value; # would print 'red'
     $table_rs->color->unset; # set the value to 'undef' or 'null'
     $table_rs->color->is_red; # returns false now
-    
 
 # METHODS
 
@@ -69,6 +68,10 @@ Jason M. Mills, `<jmmills at cpan.org>`
 Please report any bugs or feature requests to `bug-dbix-class-inflatecolumn-object-enum at rt.cpan.org`, or through
 the web interface at [http://rt.cpan.org/NoAuth/ReportBug.html?Queue=DBIx-Class-InflateColumn-Object-Enum](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=DBIx-Class-InflateColumn-Object-Enum).  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
+
+# CAVEATS
+
+- Please note that when a column definition `is_nullable` then [Object::Enum](https://metacpan.org/pod/Object::Enum) will insist that there be a `default_value` set.
 
 # SUPPORT
 

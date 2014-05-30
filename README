@@ -65,6 +65,10 @@ BUGS
     -Object-Enum>. I will be notified, and then you'll automatically be
     notified of progress on your bug as I make changes.
 
+CAVEATS
+    * Please note that when a column definition "is_nullable" then
+      Object::Enum will insist that there be a "default_value" set.
+
 SUPPORT
     You can find documentation for this module with the perldoc command.
 
